@@ -34,24 +34,26 @@ function NavSection() {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="logo"></img>
+          <img className="Logo" src={logo} alt="logo"></img>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon navbar-dark"></span>
         </Navbar.Toggle>
-        <Navbar.Collapse></Navbar.Collapse>
+        <Navbar.Collapse className="Dummy-Nav"></Navbar.Collapse>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
               className={activeLink == "home" ? "active-nav-link" : "nav-link"}
-              onClick={() => updateActiveLink("home")}>
+              onClick={() => updateActiveLink("home")}
+            >
               Home
             </Nav.Link>
             <Nav.Link
               href="#About"
               className={activeLink == "about" ? "active-nav-link" : "nav-link"}
-              onClick={() => updateActiveLink("about")}>
+              onClick={() => updateActiveLink("about")}
+            >
               About
             </Nav.Link>
             <Nav.Link
@@ -59,7 +61,8 @@ function NavSection() {
               className={
                 activeLink == "updates" ? "active-nav-link" : "nav-link"
               }
-              onClick={() => updateActiveLink("updates")}>
+              onClick={() => updateActiveLink("updates")}
+            >
               Updates
             </Nav.Link>
           </Nav>
@@ -68,7 +71,8 @@ function NavSection() {
             {/* Maybe add social icons later on */}
             <button
               className="Contact-button"
-              onClick={console.log("Lets connect!")}>
+              onClick={console.log("Lets connect!")}
+            >
               <span>Contact</span>
             </button>
           </span>
